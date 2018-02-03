@@ -20,20 +20,19 @@
 
     	switch ($data[$l - 2]) {
     		case "1":
-//     			$curl = curl_init();
-//     			curl_setopt_array($curl, array(
-// 				    CURLOPT_RETURNTRANSFER => 1,
-// 				    CURLOPT_URL => "https://en.wikipedia.org/w/api.php?action=opensearch&search=" . 
-// 				    str_replace(" ", "%20", $data[$l - 1]) . 
-// 				    "&limit=1&format=json",
-// 				    CURLOPT_USERAGENT => 'Victor'
-// 				));
-// 				$res = curl_exec($curl);
-// 				curl_close($curl);
+    			$curl = curl_init();
+    			curl_setopt_array($curl, array(
+				    CURLOPT_RETURNTRANSFER => 1,
+				    CURLOPT_URL => "https://en.wikipedia.org/w/api.php?action=opensearch&search=" . 
+				    str_replace(" ", "%20", $data[$l - 1]) . 
+				    "&limit=1&format=json",
+				    CURLOPT_USERAGENT => 'Victor'
+				));
+				$res = curl_exec($curl);
+				curl_close($curl);
 
-//     			$arr = json_decode($res, true); 
-//     			$response = "END " . (($arr[2][0] == "") ? "We were unable to find anything. Please try searching for something else." : $arr[2][0]); 
-    			$response = "END Sample response"; 
+    			$arr = json_decode($res, true); 
+    			$response = "END " . (($arr[2][0] == "") ? "We were unable to find anything. Please try searching for something else." : $arr[2][0]); 
 			break; 
 
     		case "2":
