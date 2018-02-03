@@ -31,9 +31,10 @@
 				$res = curl_exec($curl);
 				curl_close($curl);
 
-    			$arr = json_decode($res, true); 
-    			$response = "END " . (($arr[2][0] == "") ? "We were unable to find anything. Please try searching for something else." : $arr[2][0]); 
-    			break; 
+//     			$arr = json_decode($res, true); 
+//     			$response = "END " . (($arr[2][0] == "") ? "We were unable to find anything. Please try searching for something else." : $arr[2][0]); 
+    			$response = "END Sample response"; 
+			break; 
 
     		case "2":
     		    $curl = curl_init();
