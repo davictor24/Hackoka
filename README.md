@@ -8,6 +8,6 @@ Group 10, Hackoka hackathon
 
 ### How to use
 * Register a USSD channel on Africa's Talking
-* Connect to the API (server.php)
+* Connect to the API (api.php)
 * Type the USSD code and send
 * Enjoy the service
