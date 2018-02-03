@@ -15,7 +15,7 @@
 
     else if (preg_match("/(1|2|3|4)\*/", $text)) {
 	    
-// 	$curl = curl_init();
+	$curl = curl_init();
 // 	curl_setopt_array($curl, array(
 // 	    CURLOPT_RETURNTRANSFER => 1,
 // 	    CURLOPT_URL => "https://en.wikipedia.org/w/api.php?action=opensearch&search=hello%20world&limit=1&format=json",
