@@ -1,7 +1,5 @@
 <?php
-	require("utf8.php"); 
-
-    // Reads the variables sent via POST from our gateway
+	// Reads the variables sent via POST from our gateway
     $sessionId = $_POST["sessionId"];
     $serviceCode = $_POST["serviceCode"];
     $phoneNumber = $_POST["phoneNumber"];
@@ -16,6 +14,7 @@
     }
 
     else if (preg_match("/(1|2|3|4)\*/", $text)) {
+    	// query public APIs
     	$data = explode("*", $text); 
     	$l = count($data); 
 
