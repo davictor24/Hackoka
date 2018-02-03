@@ -15,10 +15,11 @@
 
     else if (preg_match("/(1|2|3|4)\*/", $text)) {
     	// query public APIs
-    	$data = explode("*", $text); 
-    	$l = count($data); 
+//     	$data = explode("*", $text); 
+//     	$l = count($data); 
 
-    	switch ($data[$l - 2]) {
+	switch ("1") {
+//     	switch ($data[$l - 2]) {
     		case "1":
 //     			$curl = curl_init();
 //     			curl_setopt_array($curl, array(
