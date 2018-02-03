@@ -25,8 +25,7 @@
 	curl_close($curl);
 
 	$arr = json_decode($res, true); 
-	$response = "END " . (($arr[2][0] == "") ? "We were unable to find anything. Please try searching for something else." : $arr[2][0]); 
-    			
+	$response = "END Sample response"; 
 	    
 //     	// query public APIs
 //     	$data = explode("*", $text); 
