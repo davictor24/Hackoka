@@ -77,7 +77,7 @@
 //     			else {
 //     				for ($i = 0; $i < $len; $i++)
 //     					$response .= ($i + 1) . ". " . $arr["results"][$i]["senses"][0]["definition"][0] . "\n"; 
-    			}
+//     			}
     			break; 
     	}
     }
