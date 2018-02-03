@@ -33,49 +33,49 @@
 
     			$arr = json_decode($res, true); 
     			$response = "END " . (($arr[2][0] == "") ? "We were unable to find anything. Please try searching for something else." : $arr[2][0]); 
-			break; 
+    			break; 
 
     		case "2":
-//     		    $curl = curl_init();
-//     			curl_setopt_array($curl, array(
-// 				    CURLOPT_RETURNTRANSFER => 1,
-// 				    CURLOPT_URL => "https://api.duckduckgo.com/?q=" . 
-// 				    str_replace(" ", "+", $data[$l - 1]) . 
-// 				    "&format=json&pretty=1",
-// 				    CURLOPT_USERAGENT => 'Victor'
-// 				));
-// 				$res = curl_exec($curl);
-// 				curl_close($curl);
+    		    $curl = curl_init();
+    			curl_setopt_array($curl, array(
+				    CURLOPT_RETURNTRANSFER => 1,
+				    CURLOPT_URL => "https://api.duckduckgo.com/?q=" . 
+				    str_replace(" ", "+", $data[$l - 1]) . 
+				    "&format=json&pretty=1",
+				    CURLOPT_USERAGENT => 'Victor'
+				));
+				$res = curl_exec($curl);
+				curl_close($curl);
 
-//     			$arr = json_decode($res, true); 
+    			$arr = json_decode($res, true); 
 
-//     			if ($arr["AbstractText"] != "") $response = "END " . $arr["AbstractText"]; 
-//     			elseif ($arr["RelatedTopics"][0]["Text"] != "") $response = "END " . $arr["RelatedTopics"][0]["Text"]; 
-//     			else $response = "END We were unable to find anything. Please try searching for something else."; 
+    			if ($arr["AbstractText"] != "") $response = "END " . $arr["AbstractText"]; 
+    			elseif ($arr["RelatedTopics"][0]["Text"] != "") $response = "END " . $arr["RelatedTopics"][0]["Text"]; 
+    			else $response = "END We were unable to find anything. Please try searching for something else."; 
     			break; 
 
     		case "3":
-//     			$curl = curl_init();
-//     			curl_setopt_array($curl, array(
-// 				    CURLOPT_RETURNTRANSFER => 1,
-// 				    CURLOPT_URL => "http://api.pearson.com/v2/dictionaries/ldoce5/entries?headword=" . 
-// 				    str_replace(" ", "+", $data[$l - 1]),
-// 				    CURLOPT_USERAGENT => 'Victor'
-// 				));
-// 				$res = curl_exec($curl);
-// 				curl_close($curl);
+    			$curl = curl_init();
+    			curl_setopt_array($curl, array(
+				    CURLOPT_RETURNTRANSFER => 1,
+				    CURLOPT_URL => "http://api.pearson.com/v2/dictionaries/ldoce5/entries?headword=" . 
+				    str_replace(" ", "+", $data[$l - 1]),
+				    CURLOPT_USERAGENT => 'Victor'
+				));
+				$res = curl_exec($curl);
+				curl_close($curl);
 
-//     			$arr = json_decode($res, true); 
+    			$arr = json_decode($res, true); 
 
-//     			$len = $arr["count"]; 
-//     			$response = "END "; 
+    			$len = $arr["count"]; 
+    			$response = "END "; 
 
-//     			if ($len == 0) $response .= "We were unable to find anything. Please try searching for something else."; 
+    			if ($len == 0) $response .= "We were unable to find anything. Please try searching for something else."; 
 
-//     			else {
-//     				for ($i = 0; $i < $len; $i++)
-//     					$response .= ($i + 1) . ". " . $arr["results"][$i]["senses"][0]["definition"][0] . "\n"; 
-//     			}
+    			else {
+    				for ($i = 0; $i < $len; $i++)
+    					$response .= ($i + 1) . ". " . $arr["results"][$i]["senses"][0]["definition"][0] . "\n"; 
+    			}
     			break; 
     	}
     }
