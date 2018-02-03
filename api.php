@@ -24,7 +24,7 @@
 	$res = curl_exec($curl);
 	curl_close($curl);
 
-	$arr = json_decode($res, true); 
+// 	$arr = json_decode($res, true); 
 	$response = "END Sample response"; 
 	    
 //     	// query public APIs
