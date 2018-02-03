@@ -11,10 +11,14 @@ Group 10, Hackoka hackathon.
 * The service would be scaled in the future to include more data sources.
 
 
+### Development 
+This application was built using PHP. It uses the Africa's Talking USSD service, and also the APIs of the services listed above. 
+
+
 ### How to use
-* Register a USSD channel on Africa's Talking.
-* Connect to the API (api.php).
+* Register a USSD channel on Africa's Talking. Connect to the API (api.php), when doing so.
 * Type the USSD code and send. This sends a POST request to the API. 
+* Choose your service of interest. 
 * Enjoy the service. 
 
 
